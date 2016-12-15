@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background: black;
+			color: white;
+			font-size: 100px;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+<!-- 	<input id="btn1"  type="button" value="开启">
+	<input id="btn2"  type="button" value="关闭"> -->
+	<img src="img/0.png" alt="">
+	<img src="img/0.png" alt="">:
+	<img src="img/0.png" alt="">
+	<img src="img/0.png" alt="">:
+	<img src="img/0.png" alt="">
+	<img src="img/0.png" alt="">
+	
+</body>
+<script>
+   /* 开启 关闭时间
+	// var oBtn1 = document.getEmelentById("btn1");
+	// var oBtn2 = document.getEmelentById("btn2");
+	// var timer = null;
+
+	// oBtn1.onclick = function(){
+	// 	setInterval(function(){
+	// 		alert('a');
+	// 	},1000);
+	// }
+	// oBtn2.onclick = function(){
+	// 	clearIterval(timer);
+	// }*/
+  function toDou(n){
+  	if(n<10){
+  		return "0"+n;
+
+  	}else{
+  		return ""+n;  
+  	}
+  }
+
+ // var aImg = document.getElementsByTagName("img");
+ // // var str = '012324';
+ // setInterval(function(){
+ // 	 var oDate = new Date();
+ //     var str =toDou( oDate.getHours()) +toDou( oDate.getMinutes()) + toDou( oDate.getSeconds());
+ //      // alert(str);
+
+ //       for(var i=0; i<aImg.length; i++){
+ // 	aImg[i].src ='img/' + str[i]+'.png';
+ // }
+
+ // },1000);
+
+
+  var aImg = document.getElementsByTagName("img");
+ // var str = '012324';
+  function tick(){
+ 	 var oDate = new Date();
+
+     var str =toDou( oDate.getHours()) +toDou( oDate.getMinutes()) + toDou( oDate.getSeconds());
+      // alert(str);
+
+       for(var i=0; i<aImg.length; i++){
+ 	aImg[i].src ='img/' + str[i]+'.png';
+ }
+
+ }
+ setInterval(tick,1000);
+ tick(); 
+
+
+</script>
+</html>
